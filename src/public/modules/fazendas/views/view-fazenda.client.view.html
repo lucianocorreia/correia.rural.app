@@ -1,0 +1,22 @@
+<section data-ng-controller="FazendasController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="fazenda.name"></h1>
+        <h5 data-ng-bind="getEnderecoCompleto(fazenda)"></h5>
+	</div>
+	<div class="pull-right" data-ng-show="authentication.user._id == fazenda.user._id">
+		<a class="btn btn-primary" href="/#!/fazendas/{{fazenda._id}}/edit">
+			<i class="glyphicon glyphicon-edit"> Editar</i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"> Excluir</i>
+		</a>
+	</div>
+	<small>
+		<em class="text-muted">
+			Criado em
+			<span data-ng-bind="fazenda.created | date:'mediumDate'"></span>
+			por
+			<span data-ng-bind="fazenda.user.displayName"></span>
+		</em>
+	</small>
+</section>

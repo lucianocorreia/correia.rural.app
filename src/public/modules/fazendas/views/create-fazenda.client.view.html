@@ -1,0 +1,54 @@
+<section data-ng-controller="FazendasController">
+    <div class="page-header">
+        <h4>Cadastrar fazenda</h4>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()">
+            <fieldset>
+                <!-- Name -->
+                <div class="form-group">
+                    <label class="control-label" for="name">Nome</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Nome" required>
+                    </div>
+                </div>
+                <!-- Endereço -->
+                <div class="form-group">
+                    <label class="control-label" for="endereco">Endereço</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="endereco" id="endereco" class="form-control" placeholder="Endereço" required>
+                    </div>
+                </div>
+                <!-- Complemento -->
+                <div class="form-group">
+                    <label class="control-label" for="complemento">Complemento</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="complemento" id="complemento" class="form-control" placeholder="Complemento">
+                    </div>
+                </div>
+                <!-- Cidade -->
+                <div class="form-group">
+                    <label class="control-label" for="cidade">Cidade</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="cidade" id="cidade" class="form-control" placeholder="Cidade">
+                    </div>
+                </div>
+                <!-- Uf -->
+                <div class="form-group">
+                    <label class="control-label" for="uf">UF</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="uf" id="uf" class="form-control" placeholder="UF">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default" value="Salvar">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
