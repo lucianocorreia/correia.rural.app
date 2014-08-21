@@ -23,7 +23,12 @@ var ParticipanteSchema = new Schema({
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
-	}
+	},
+    fazenda: {
+        type: Schema.ObjectId,
+        ref: 'Fazenda'
+    }
+
 });
 
 mongoose.model('Participante', ParticipanteSchema);
