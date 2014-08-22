@@ -2,7 +2,7 @@
 
 // Participantes controller
 angular.module('participantes').controller('ParticipantesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Participantes',
-	function($scope, $stateParams, $location, Authentication, Participantes ) {
+	function($scope, $stateParams, $location, Authentication, Participantes) {
 		$scope.authentication = Authentication;
 
 		// Create new Participante
@@ -57,7 +57,7 @@ angular.module('participantes').controller('ParticipantesController', ['$scope',
 
 		// Find existing Participante
 		$scope.findOne = function() {
-			$scope.participante = Participantes.get({ 
+			$scope.participante = Participantes.get({
 				participanteId: $stateParams.participanteId
 			});
 		};

@@ -1,6 +1,8 @@
 <section data-ng-controller="ParticipantesController" data-ng-init="findOne()">
 	<div class="page-header">
 		<h1 data-ng-bind="participante.name"></h1>
+        <h5 class="list-group-item-text text-warning" data-ng-if="participante.tipo === 'F'">Funcionário</h5>
+        <h5 class="list-group-item-text text-warning" data-ng-if="participante.tipo === 'P'">Participante</h5>
 	</div>
 	<div class="pull-right" data-ng-show="authentication.user._id == participante.user._id">
 		<a class="btn btn-primary" href="/#!/participantes/{{participante._id}}/edit">
@@ -12,9 +14,9 @@
 	</div>
 	<small>
 		<em class="text-muted">
-			Posted on
+			Criado em
 			<span data-ng-bind="participante.created | date:'mediumDate'"></span>
-			by
+			por
 			<span data-ng-bind="participante.user.displayName"></span>
 		</em>
 	</small>

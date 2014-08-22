@@ -24,9 +24,10 @@ var ParticipanteSchema = new Schema({
 		type: Schema.ObjectId,
 		ref: 'User'
 	},
-    fazenda: {
-        type: Schema.ObjectId,
-        ref: 'Fazenda'
+    tipo: {
+        type: String,
+        uppercase: true,
+        enum: ['F', 'P']
     }
 
 });

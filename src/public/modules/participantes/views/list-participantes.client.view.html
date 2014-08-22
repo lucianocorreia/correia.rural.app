@@ -1,16 +1,19 @@
 <section data-ng-controller="ParticipantesController" data-ng-init="find()">
     <div class="page-header">
-        <h1>Participantes</h1>
+        <h4>Participantes</h4>
     </div>
     <div class="list-group">
         <a data-ng-repeat="participante in participantes" data-ng-href="#!/participantes/{{participante._id}}" class="list-group-item">
 			<small class="list-group-item-text">
-				Posted on
+				Criado em
 				<span data-ng-bind="participante.created | date:'medium'"></span>
-				by
+				por
 				<span data-ng-bind="participante.user.displayName"></span>
 			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="participante.name"></h4>
+            <p></p>
+			<h3 class="list-group-item-heading" data-ng-bind="participante.name"></h3>
+            <h5 class="list-group-item-text text-warning" data-ng-if="participante.tipo === 'F'">Funcionário</h5>
+            <h5 class="list-group-item-text text-warning" data-ng-if="participante.tipo === 'P'">Participante</h5>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!participantes.$resolved || participantes.length">
