@@ -9,7 +9,8 @@ angular.module('participantes').controller('ParticipantesController', ['$scope',
 		$scope.create = function() {
 			// Create new Participante object
 			var participante = new Participantes ({
-				name: this.name
+				name: this.name,
+                tipo: this.tipo
 			});
 
 			// Redirect after save

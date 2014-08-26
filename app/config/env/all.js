@@ -20,16 +20,29 @@ module.exports = {
                 'client/lib/bootstrap/dist/css/bootstrap-theme.css'
             ],
             js: [
-                'public/lib/angular/angular.js',
-                'public/lib/angular-resource/angular-resource.js',
-                'public/lib/angular-cookies/angular-cookies.js',
-                'public/lib/angular-animate/angular-animate.js',
-                'public/lib/angular-touch/angular-touch,js',
-                'public/lib/angular-sanitize/angular-sanitize.js',
-                'public/lib/angular-ui-router/release/angular-ui-router.js',
-                'public/lib/angular-ui-utils/ui-utils.js'
+                'client/lib/angular/angular.js',
+                'client/lib/angular-resource/angular-resource.js',
+                'client/lib/angular-cookies/angular-cookies.js',
+                'client/lib/angular-animate/angular-animate.js',
+                'client/lib/angular-touch/angular-touch,js',
+                'client/lib/angular-sanitize/angular-sanitize.js',
+                'client/lib/angular-ui-router/release/angular-ui-router.js',
+                'client/lib/angular-ui-utils/ui-utils.js'
             ]
-        }
+        },
+        css: [
+            'client/modules/**/css/*.css'
+        ],
+        js: [
+            'client/congig.js',
+            'client/application.js',
+            'client/modules/*/*.js',
+            'client/modules/*/*[!tests]*/*.js'
+        ],
+        tests: [
+            'client/lib/angular-mocks/angular-mocks.js',
+            'client/modules/*/tests/*.js'
+        ]
     }
 
 
